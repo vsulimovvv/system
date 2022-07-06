@@ -76,7 +76,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const showMoreContainer = document.querySelector('.event-program__list');
     if (showMoreBtn) {
       showMoreBtn.addEventListener('click', (e) => {
-        showMoreContainer.classList.toggle('active')
+        showMoreContainer.classList.toggle('active');
+
+        if (showMoreContainer.classList.contains('active')) {
+          showMoreBtn.textContent = 'Скрыть';
+        } else {
+          showMoreBtn.textContent = 'Показать еще';
+        }
       });
     }
   })();
