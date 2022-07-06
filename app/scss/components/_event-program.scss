@@ -1,0 +1,90 @@
+.event-program {
+  @include adaptive-value('padding-bottom', 100, 60, 1);
+
+  &__title {
+    @include fz26();
+    @include adaptive-value('margin-bottom', 60, 40, 1);
+    text-align: center;
+  }
+
+  &__list {
+    max-width: 720px;
+    margin: 0 auto;
+    @include adaptive-value('margin-bottom', 55, 30, 1);
+    max-height: 480px;
+    overflow: hidden;
+    transition: 300ms ease;
+
+    &.active {
+      max-height: 100%;
+      overflow: visible;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 23px;
+    padding-top: 23px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      padding: 15px 0;
+      gap: 20px;
+    }
+  }
+
+  &__left {
+    color: var(--color-accent);
+    font-size: 17px;
+    line-height: 1;
+    font-weight: 700;
+    width: 70px;
+    @include adaptive-value('font-size', 17, 16, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      width: 50px;
+    }
+  }
+
+  &__right {
+    font-weight: 400;
+    width: 100%;
+    @include adaptive-value('font-size', 18, 15, 1);
+  }
+
+  &__more {
+    line-height: 1;
+    font-weight: 600;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    transition: 200ms ease;
+    @include adaptive-value('font-size', 14, 12, 1);
+    @include adaptive-value('padding-right', 20, 15, 1);
+
+    &::after {
+      @include elDef();
+      @include maskImage(url('../images/content/triangle.png'), contain);
+      background-color: var(--color-black);
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include adaptive-value('width', 10, 8, 1);
+      @include adaptive-value('height', 10, 8, 1);
+    }
+
+    &:hover {
+      color: var(--color-accent);
+
+      &::after {
+        background-color: var(--color-accent);
+      }
+    }
+  }
+}

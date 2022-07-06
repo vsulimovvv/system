@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @include('./components/base/_meta.html')
+    @include('./components/base/_links.html')
+
+    <title>Title</title>
+  </head>
+
+  <body>
+    @include('./components/popups/_popups.html')
+
+    <h1 class="visually-hidden">Главная</h1>
+
+    <div class="site-wrapper">
+      @include('./components/_header.html')
+
+      <main class="main">
+        @include('./components/_hero-networking.html')
+        @include('./components/_event.html')
+        @include('./components/_event-program.html')
+        @include('./components/_about-event.html')
+        @include('./components/_faqs.html')
+        @include('./components/_reviews.html')
+        @include('./components/_ticket.html')
+        @include('./components/_photos.html')
+        @include('./components/_join.html')
+        @include('./components/_location.html')
+      </main>
+      @include('./components/_footer.html')
+    </div>
+
+    @include('./components/base/_scripts.html')
+  </body>
+</html>
+
+<!-- <label class="checkbox">
+  <input class="checkbox__input" type="checkbox" required />
+  <span class="checkbox__box"></span>
+  <span class="checkbox__text">
+    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+  </span> 
+</label> -->

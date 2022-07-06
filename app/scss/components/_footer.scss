@@ -1,0 +1,44 @@
+.footer {
+  &__logo {
+    max-width: 220px;
+
+    @include breakpointsMaxW($bp-768) {
+      max-width: 200px;
+    }
+    
+    @include breakpointsMaxW($bp-360) {
+      max-width: 170px;
+    }
+  }
+
+  &__top {
+    padding: 25px 0;
+    border-bottom: 1px solid #e6e6e6;
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__bottom {
+    padding: 20px 0;
+    font-family: 'SF Pro Display';
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 900;
+    color: #bbbbbb;
+    text-align: center;
+
+    a {
+      &:hover {
+        color: var(--color-black);
+      }
+
+      @include breakpointsMaxW($bp-768) {
+        display: block;
+      }
+    }
+  }
+}

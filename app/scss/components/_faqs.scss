@@ -1,0 +1,82 @@
+.faqs {
+  @include adaptive-value('padding-bottom', 80, 50, 1);
+
+  .accordion-item {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--color-black);
+
+    .accordion-button {
+      background-color: transparent;
+      box-shadow: none;
+      color: initial;
+      line-height: 1;
+      font-weight: 500;
+      padding-left: 0;
+      padding-right: 0;
+      @include adaptive-value('font-size', 18, 16, 1);
+
+      &::after {
+        background-image: none;
+        content: '-';
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &.collapsed {
+        &::after {
+          content: '+';
+        }
+      }
+    }
+
+    .accordion-body {
+      font-weight: 300;
+      color: #696969;
+      padding-left: 0;
+      padding-right: 0;
+      @include adaptive-value('font-size', 15, 14, 1);
+      @include adaptive-value('padding-top', 16, 5, 1);
+    }
+  }
+
+  &__title {
+    @include fz26();
+    @include adaptive-value('margin-bottom', 60, 30, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      text-align: center;
+      span {
+        display: block;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 100px;
+    align-items: center;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 50px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__preview {
+    max-width: 540px;
+    @include background(contain);
+    width: 100%;
+    @include adaptive-value('height', 600, 300, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      display: none;
+    }
+  }
+}

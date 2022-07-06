@@ -1,0 +1,37 @@
+.ticket {
+  @include adaptive-value('padding-bottom', 80, 50, 1);
+
+  &__title {
+    @include fz26();
+    @include adaptive-value('margin-bottom', 60, 40, 1);
+    text-align: center;
+  }
+
+  &__list {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__item {
+    width: 100%;
+    padding-left: 18px;
+    position: relative;
+    line-height: 1;
+    font-weight: 500;
+
+    &::after {
+      @include elDef();
+      width: 5px;
+      height: 5px;
+      top: 5px;
+      left: 0;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

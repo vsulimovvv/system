@@ -1,0 +1,12 @@
+.location {
+  &__title {
+    @include fz26();
+    text-align: center;
+    @include adaptive-value('margin-bottom', 40, 30, 1);
+  }
+
+  &__map {
+    width: 100%;
+    height: 440px;
+  }
+}

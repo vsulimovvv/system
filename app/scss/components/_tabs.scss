@@ -1,0 +1,66 @@
+.tabs {
+  @include adaptive-value('padding-bottom', 100, 60, 1);
+
+  &__top {
+    @include adaptive-value('margin-bottom', 35, 25, 1);
+
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include adaptive-value('gap', 115, 30, 1);
+
+      @include breakpointsMaxW($bp-360) {
+        gap: 15px;
+      }
+    }
+
+    &-btn {
+      line-height: 1;
+      font-weight: 400;
+      position: relative;
+      @include adaptive-value('font-size', 18, 15, 1);
+      @include adaptive-value('padding-bottom', 8, 5, 1);
+      transition: 200ms ease;
+
+      @include breakpointsMaxW($bp-360) {
+        font-size: 13px;
+      }
+
+      &:hover {
+        color: var(--color-accent);
+      }
+
+      &::after {
+        @include elDef();
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background-color: var(--color-black);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 300ms ease;
+      }
+
+      &--active {
+        &:hover {
+          color: var(--color-black);
+        }
+        
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &.active {
+      display: block;
+      animation: opacity-visibility 700ms ease forwards;
+    }
+  }
+}

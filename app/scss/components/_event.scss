@@ -1,0 +1,78 @@
+.event {
+  @include adaptive-value('padding-bottom', 70, 50, 1);
+
+  &__preview {
+    @include adaptive-value('height', 590, 300, 1);
+    @include background(cover);
+    @include adaptive-value('margin-bottom', 60, 40, 1);
+  }
+
+  &__inner {
+    display: flex;
+    gap: 120px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #e7e7e7;
+
+    @include breakpointsMaxW($bp-991) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 70px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      gap: 40px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      gap: 25px;
+    }
+  }
+
+  &__heading {
+    @include fz26();
+    @include adaptive-value('margin-bottom', 20, 10, 1);
+  }
+
+  &__text {
+    font-family: $SFProDisplay;
+    font-weight: 300;
+    @include adaptive-value('font-size', 19, 15, 1);
+  }
+
+  .event-master {
+    display: flex;
+    gap: 30px;
+    @include adaptive-value('gap', 30, 15, 1);
+
+    &__title {
+      @include fz26();
+    }
+
+    &__name {
+      @include adaptive-value('font-size', 21, 16, 1);
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    &__img {
+      border-radius: 50%;
+      object-fit: cover;
+      @include adaptive-value('width', 180, 100, 1);
+      @include adaptive-value('height', 180, 100, 1);
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @include adaptive-value('gap', 20, 10, 1);
+    }
+
+    &__text {
+      @include adaptive-value('font-size', 15, 13, 1);
+    }
+  }
+}

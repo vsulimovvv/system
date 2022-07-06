@@ -1,0 +1,15 @@
+.join {
+  padding-top: 30px;
+  @include adaptive-value('padding-bottom', 80, 50, 1);
+
+  &__title {
+    @include fz26();
+    @include adaptive-value('margin-bottom', 80, 50, 1);
+    text-align: center;
+  }
+
+  &__form {
+    max-width: 570px;
+    margin: 0 auto;
+  }
+}

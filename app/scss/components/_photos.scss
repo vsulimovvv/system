@@ -1,0 +1,31 @@
+.photos {
+  @include adaptive-value('padding-bottom', 80, 50, 1);
+
+  &__title {
+    @include fz26();
+    text-align: center;
+    @include adaptive-value('margin-bottom', 60, 40, 1);
+  }
+
+  &__slider {
+    position: relative;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 50%;
+    }
+  }
+
+  &__slide {
+    max-width: 375px;
+    height: 320px;
+    cursor: pointer;
+
+    @include adaptive-value('height', 320, 200, 1);
+    @include adaptive-value('max-width', 375, 250, 1);
+
+    img {
+      @include img(cover);
+    }
+  }
+}
