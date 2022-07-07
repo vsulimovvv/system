@@ -1,5 +1,6 @@
 .mentors-page {
   @include adaptive-value('padding-top', 70, 40, 1);
+  @include adaptive-value('padding-bottom', 90, 50, 1);
   &__title {
     @include fz35();
     @include adaptive-value('margin-bottom', 80, 50, 1);
