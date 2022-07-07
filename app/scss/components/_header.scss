@@ -8,16 +8,36 @@
   background-color: var(--color-white);
   z-index: 10;
 
+  &__logo {
+    @include breakpointsMaxW($bp-container) {
+      max-width: calc(150px + (220 - 150) * ((100vw - 991px) / (1270 - 991)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      max-width: 200px;
+    }
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 18px;
+    }
   }
 
   &__socials {
     @include breakpointsMaxW($bp-991) {
       margin-left: auto;
+    }
+
+    .socials__list {
+      @include breakpointsMaxW($bp-container) {
+        gap: 10px;
+      }
     }
   }
 
@@ -30,6 +50,7 @@
     line-height: 1;
     font-size: 13px;
     font-weight: 600;
+    flex-shrink: 0;
 
     @include breakpointsMaxW($bp-991) {
       display: none;
@@ -45,6 +66,16 @@
       background-color: var(--color-black);
       @include maskImage(url('../images/icons/enter.svg'), contain);
       transition: 200ms ease;
+    }
+
+    @include breakpointsMaxW($bp-container) {
+      padding: 14px 12px 14px 32px;
+
+      &::after {
+        width: 18px;
+        height: 18px;
+        left: 10px;
+      }
     }
 
     &:hover {

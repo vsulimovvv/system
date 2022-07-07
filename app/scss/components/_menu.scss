@@ -7,6 +7,10 @@
     display: flex;
     align-items: center;
     gap: 25px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: calc(10px + (25 - 10) * ((100vw - 991px) / (1270 - 991)));
+    }
   }
 
   &__link {
@@ -16,6 +20,10 @@
     font-weight: 300;
     transition: 200ms ease;
     position: relative;
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(12px + (14 - 12) * ((100vw - 991px) / (1270 - 991)));
+    }
 
     &::after {
       @include elDef();

@@ -44,6 +44,10 @@
 
     &:focus,
     &:active {
+      &::placeholder {
+        color: var(--color-black);
+      }
+      
       + span {
         &::after {
           transform: scaleX(1);

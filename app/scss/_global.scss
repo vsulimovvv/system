@@ -79,7 +79,7 @@ a {
   @include adaptive-value('max-width', 220, 200, 1);
 
   @include breakpointsMaxW($bp-360) {
-    max-width: 170px;
+    max-width: 170px !important;
   }
 
   &:hover {

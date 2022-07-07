@@ -25,6 +25,12 @@
     transform: translateX(-50%);
     bottom: 30px;
     z-index: 3;
+    font-size: 15px;
+
+    @include breakpointsMaxW($bp-768) {
+      width: 200px;
+      padding: 15px;
+    }
 
     &:active {
       transform: scale(0.98) translateX(-50%);
