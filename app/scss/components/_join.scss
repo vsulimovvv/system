@@ -6,6 +6,13 @@
     @include fz26();
     @include adaptive-value('margin-bottom', 80, 50, 1);
     text-align: center;
+    line-height: 1.3;
+
+    @include breakpointsMaxW($bp-768){
+      span{
+        display: block;
+      }
+    }
   }
 
   &__form {

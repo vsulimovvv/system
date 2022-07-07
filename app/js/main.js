@@ -121,13 +121,15 @@ window.addEventListener('DOMContentLoaded', () => {
     let popupImg = popup.querySelector('.popup__img');
 
     valueItems.forEach((item) => {
-      item.addEventListener('click', (e) => {
-        const valueText = item.textContent;
-        const img = item.querySelector('.values__img').src;
-        popupTitle.textContent = valueText;
-        popupImg.setAttribute('src', img);
-        popupImg.setAttribute('alt', valueText);
-      });
+      if (item) {
+        item.addEventListener('click', (e) => {
+          const valueText = item.textContent;
+          const img = item.querySelector('.values__img').src;
+          popupTitle.textContent = valueText;
+          popupImg.setAttribute('src', img);
+          popupImg.setAttribute('alt', valueText);
+        });
+      }
     });
   }
 
