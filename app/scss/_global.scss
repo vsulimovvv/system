@@ -43,6 +43,15 @@ body {
 
 a {
   transition: 200ms ease;
+  color: var(--color-black);
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+button {
+  color: var(--color-black);
 
   &:hover {
     color: inherit;
