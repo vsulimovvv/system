@@ -9,13 +9,6 @@
   z-index: 10;
 
   &__logo {
-    @include breakpointsMaxW($bp-container) {
-      max-width: calc(150px + (220 - 150) * ((100vw - 991px) / (1270 - 991)));
-    }
-
-    @include breakpointsMaxW($bp-991) {
-      max-width: 200px;
-    }
   }
 
   &__wrapper {
@@ -51,6 +44,10 @@
     font-size: 13px;
     font-weight: 600;
     flex-shrink: 0;
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(12px + (13 - 12) * ((100vw - 991px) / (1270 - 991)));
+    }
 
     @include breakpointsMaxW($bp-991) {
       display: none;

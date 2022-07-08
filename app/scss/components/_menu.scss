@@ -22,7 +22,7 @@
     position: relative;
 
     @include breakpointsMaxW($bp-container) {
-      font-size: calc(12px + (14 - 12) * ((100vw - 991px) / (1270 - 991)));
+      font-size: calc(11px + (14 - 11) * ((100vw - 991px) / (1270 - 991)));
     }
 
     &::after {

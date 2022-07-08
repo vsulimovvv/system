@@ -2,17 +2,40 @@
   &__slider {
     position: relative;
     @include adaptive-value('margin-bottom', 60, 40, 1);
-    height: 590px;
-    @include adaptive-value('height', 590, 320, 1);
 
     .swiper-button-next,
     .swiper-button-prev {
-      top: 50%;
+      top: 38%;
+
+      @include breakpointsMaxW($bp-991) {
+        top: 34%;
+      }
+
+      @include breakpointsMaxW($bp-768) {
+        top: 28%;
+      }
+      @include breakpointsMaxW($bp-576) {
+        top: 24%;
+      }
+    }
+
+    .swiper-button-next {
+      right: max(15px, calc((100% - 1240px) / 2));
+    }
+
+    .swiper-button-prev {
+      left: max(15px, calc((100% - 1240px) / 2));
     }
   }
 
   &__slide {
     box-sizing: border-box;
+  }
+
+  &__top {
+    @include adaptive-value('height', 590, 320, 1);
+    @include adaptive-value('margin-bottom', 60, 30, 1);
+    position: relative;
 
     img {
       @include img(cover);

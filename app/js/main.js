@@ -40,7 +40,6 @@ window.addEventListener('DOMContentLoaded', () => {
   (function slider() {
     const sliderEl = document.querySelector('.directions__slider');
     new Swiper(sliderEl, {
-      effect: 'fade',
       navigation: {
         nextEl: document.querySelector('.directions .swiper-button-next'),
         prevEl: document.querySelector('.directions .swiper-button-prev'),
@@ -93,23 +92,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.mobile-menu');
     const menuCloseBtn = document.querySelector('.mobile-menu__close');
     const body = document.querySelector('body');
-    const overlay = document.querySelector('.overlay');
 
     menuBtn.addEventListener('click', (e) => {
-      menu.style.transform = 'translateX(0)';
-      overlay.classList.toggle('active');
+      menu.style.transform = 'translateY(0)';
       body.classList.toggle('no-scroll');
     });
 
-    overlay.addEventListener('click', (e) => {
-      menu.style.transform = 'translateX(-100%)';
-      overlay.classList.remove('active');
-      body.classList.remove('no-scroll');
-    });
-
     menuCloseBtn.addEventListener('click', (e) => {
-      menu.style.transform = 'translateX(-100%)';
-      overlay.classList.remove('active');
+      menu.style.transform = 'translateY(100%)';
       body.classList.remove('no-scroll');
     });
   })();
