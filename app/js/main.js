@@ -112,12 +112,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelector('body');
 
     menuBtn.addEventListener('click', (e) => {
-      menu.style.transform = 'translateY(0)';
+      menu.style.transform = 'translateX(0)';
       body.classList.toggle('no-scroll');
     });
 
     menuCloseBtn.addEventListener('click', (e) => {
-      menu.style.transform = 'translateY(100%)';
+      menu.style.transform = 'translateX(-100%)';
       body.classList.remove('no-scroll');
     });
   })();
