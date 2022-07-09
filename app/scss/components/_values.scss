@@ -41,6 +41,10 @@
     justify-content: center;
     gap: 30px;
 
+    &:first-child {
+      animation: pulse 1000ms ease infinite alternate;
+    }
+
     &:hover {
       box-shadow: 0px 0px 90px 0px #e3e3e3;
     }
