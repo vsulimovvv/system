@@ -15,6 +15,12 @@
     @include breakpointsMaxW($bp-768) {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    &:hover {
+      .values__item {
+        animation: none;
+      }
+    }
   }
 
   &__img {
@@ -42,7 +48,7 @@
     gap: 30px;
 
     &:first-child {
-      animation: pulse 1000ms ease infinite alternate;
+      animation: pulse 1500ms ease infinite alternate;
     }
 
     &:hover {

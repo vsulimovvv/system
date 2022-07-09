@@ -33,7 +33,7 @@
   }
 
   &__img {
-    @include adaptive-value('height', 580, 280, 1);
+    @include adaptive-value('height', 580, 300, 1);
     object-fit: cover;
     width: 100%;
 

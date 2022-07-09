@@ -10,6 +10,21 @@
     .swiper-button-next,
     .swiper-button-prev {
       top: 20%;
+
+      @include breakpointsMaxW($bp-576) {
+        top: 25%;
+      }
+    }
+    .swiper-button-next {
+      @include breakpointsMaxW($bp-576) {
+        right: 20px;
+      }
+    }
+    
+    .swiper-button-prev {
+      @include breakpointsMaxW($bp-576) {
+        left: 20px;
+      }
     }
   }
 }
@@ -136,7 +151,7 @@
         }
 
         @include breakpointsMaxW($bp-360) {
-          height: 250px;
+          height: 280px;
         }
       }
 
