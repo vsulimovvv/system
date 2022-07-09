@@ -1,7 +1,6 @@
 .faqs {
   @include adaptive-value('padding-bottom', 80, 50, 1);
 
-
   &__wrapper {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -24,6 +23,7 @@
         border-bottom: 1px solid var(--color-black);
       }
     }
+
     button {
       position: relative;
       display: block;
@@ -31,11 +31,12 @@
       width: 100%;
       padding: 1em 0;
       color: var(--color-black);
-      font-size: 1.15rem;
-      font-weight: 400;
+      font-size: 18px;
+      font-weight: 500;
       border: none;
       background: none;
       outline: none;
+
       &:hover,
       &:focus {
         cursor: pointer;
@@ -46,9 +47,11 @@
           border: 1px solid var(--color-black);
         }
       }
+
       .accordion-title {
         padding: 1em 1.5em 1em 0;
       }
+
       .icon {
         display: inline-block;
         position: absolute;
@@ -79,6 +82,7 @@
         }
       }
     }
+
     button[aria-expanded='true'] {
       color: var(--color-black);
       .icon {
@@ -93,16 +97,19 @@
         will-change: opacity, max-height;
       }
     }
+
     .accordion-content {
       opacity: 0;
       max-height: 0;
       overflow: hidden;
       transition: opacity 200ms linear, max-height 200ms linear;
       will-change: opacity, max-height;
+
       p {
-        font-size: 1rem;
+        font-family: $SFProDisplay;
+        font-size: 15px;
         font-weight: 300;
-        margin: 2em 0;
+        padding: 2em 0;
       }
     }
   }
