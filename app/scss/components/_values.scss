@@ -58,7 +58,6 @@
 
     &:first-child {
       animation: pulse 1500ms ease infinite alternate;
-      box-shadow: 0px 0px 90px 0px #e3e3e3;
 
       &::after {
         @include elDef();
