@@ -19,6 +19,14 @@
     &:hover {
       .values__item {
         animation: none;
+        &:first-child {
+          box-shadow: 0;
+        }
+
+        &::after {
+          opacity: 0;
+          visibility: hidden;
+        }
       }
     }
   }
@@ -46,9 +54,27 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+    position: relative;
 
     &:first-child {
       animation: pulse 1500ms ease infinite alternate;
+      box-shadow: 0px 0px 90px 0px #e3e3e3;
+
+      &::after {
+        @include elDef();
+        width: 35px;
+        height: 35px;
+        @include backgroundImage(url('../images/content/cursor.png'), contain);
+        top: 20px;
+        right: 20px;
+        transition: 300ms ease;
+        z-index: 2;
+
+        @include breakpointsMaxW($bp-768) {
+          width: 25px;
+          height: 25px;
+        }
+      }
     }
 
     &:hover {
