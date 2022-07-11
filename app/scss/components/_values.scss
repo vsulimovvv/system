@@ -19,6 +19,7 @@
     &:hover {
       .values__item {
         animation: none;
+
         &:first-child {
           box-shadow: 0;
         }
@@ -67,7 +68,7 @@
         top: 20px;
         right: 20px;
         transition: 300ms ease;
-        z-index: 2;
+        z-index: 3;
 
         @include breakpointsMaxW($bp-768) {
           width: 25px;
