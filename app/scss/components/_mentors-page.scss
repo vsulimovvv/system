@@ -1,9 +1,13 @@
 .mentors-page {
   @include adaptive-value('padding-top', 70, 40, 1);
   @include adaptive-value('padding-bottom', 90, 50, 1);
+
   &__title {
+    text-align: center;
     @include fz35();
-    @include adaptive-value('margin-bottom', 80, 50, 1);
+    @include adaptive-value('margin-bottom', 80, 40, 1);
+    font-weight: 500;
+
   }
 
   &__list {

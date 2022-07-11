@@ -5,8 +5,9 @@
   &__title {
     @include fz35();
     text-align: center;
-    font-weight: 300;
+    font-weight: 500;
     @include adaptive-value('margin-bottom', 70, 30, 1);
+    text-align: center;
   }
 
   &__wrapper {

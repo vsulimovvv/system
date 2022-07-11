@@ -1,5 +1,5 @@
 .event {
-  @include adaptive-value('padding-bottom', 70, 50, 1);
+  @include adaptive-value('padding-bottom', 70, 60, 1);
 
   &__preview {
     @include adaptive-value('height', 590, 300, 1);
@@ -10,8 +10,6 @@
   &__inner {
     display: flex;
     gap: 120px;
-    padding-bottom: 60px;
-    border-bottom: 1px solid #e7e7e7;
 
     @include breakpointsMaxW($bp-991) {
       flex-direction: column;
@@ -27,7 +25,7 @@
     }
 
     @include breakpointsMaxW($bp-768) {
-      gap: 25px;
+      gap: 50px;
     }
   }
 
@@ -42,37 +40,74 @@
     @include adaptive-value('font-size', 19, 15, 1);
   }
 
+  &__topic {
+    @include breakpointsMaxW($bp-991) {
+      text-align: center;
+    }
+  }
+
   .event-master {
-    display: flex;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: repeat(3, auto);
     gap: 30px;
-    @include adaptive-value('gap', 30, 15, 1);
+    @include adaptive-value('gap', 30, 25, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      grid-template-rows: repeat(4, auto);
+      grid-template-columns: 1fr;
+    }
 
     &__title {
       @include fz26();
+      grid-column: 2/3;
+
+      @include breakpointsMaxW($bp-768) {
+        grid-column: initial;
+        grid-row: 1/2;
+        margin-bottom: 10px;
+      }
     }
 
     &__name {
-      @include adaptive-value('font-size', 21, 16, 1);
+      @include adaptive-value('font-size', 21, 18, 1);
       line-height: 1.2;
       font-weight: 500;
+      grid-column: 2/3;
+
+      @include breakpointsMaxW($bp-768) {
+        grid-column: initial;
+        grid-row: 3/4;
+      }
     }
 
     &__img {
       border-radius: 50%;
       object-fit: cover;
-      @include adaptive-value('width', 180, 100, 1);
-      @include adaptive-value('height', 180, 100, 1);
-    }
+      @include adaptive-value('width', 180, 150, 1);
+      @include adaptive-value('height', 180, 150, 1);
+      grid-column: 1/2;
+      grid-row: 1/-1;
 
-    &__info {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      @include adaptive-value('gap', 20, 10, 1);
+      @include breakpointsMaxW($bp-768) {
+        grid-row: 2/3;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+      }
     }
 
     &__text {
-      @include adaptive-value('font-size', 15, 13, 1);
+      font-size: 15px;
+      grid-column: 2/3;
+
+      @include breakpointsMaxW($bp-768) {
+        grid-column: initial;
+        grid-row: 4/5;
+      }
     }
   }
 }
