@@ -7,22 +7,55 @@ window.addEventListener('DOMContentLoaded', () => {
     {
       date: '2022-07-20',
       badge: true,
-      title: 'Для новичков',
       classname: 'newbies',
+      title: 'Для новичков',
+      time: '15:00',
     },
     {
       date: '2022-07-17',
       badge: true,
-      title: 'Школа бизнеса',
       classname: 'school-business',
+      title: 'Школа бизнеса',
+      time: '18:00',
     },
     {
       date: '2022-07-22',
       badge: true,
-      title: 'Выезд за город',
       classname: 'out-town',
+      title: 'Выезд за город',
+      time: '21:00',
     },
   ];
+
+  console.log(eventData[1].time);
+
+  function myDateFunction(id, fromModal) {
+    $('#date-popover').hide();
+    if (fromModal) {
+      $('#' + id + '_modal').modal('hide');
+    }
+    var title = $('#' + id).attr('title');
+
+    var time = '';
+    $.each(eventData, function (id, data) {
+      
+      console.log(id);
+      $.each(data, function (index, value) {
+        if (index === 'time') {
+          time = value;
+        }
+      });
+    });
+    console.log(time);
+
+    if (fromModal) {
+      $('#' + id + '_modal').modal('hide');
+    }
+
+    $('#date-popover-content').html(time + '<br />' + title);
+    $('#date-popover').show();
+    return true;
+  }
 
   $('#calendar').zabuto_calendar({
     language: 'ru',
@@ -30,6 +63,10 @@ window.addEventListener('DOMContentLoaded', () => {
     nav_icon: {
       prev: '<i class="fa fa-chevron-left"></i>',
       next: '<i class="fa fa-chevron-right"></i>',
+    },
+
+    action: function () {
+      return myDateFunction(this.id);
     },
 
     legend: [
