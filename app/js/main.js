@@ -13,8 +13,8 @@ window.addEventListener('DOMContentLoaded', () => {
     today: true,
     data: eventData,
     nav_icon: {
-      prev: '<i class="fa fa-chevron-circle-left"></i>',
-      next: '<i class="fa fa-chevron-circle-right"></i>',
+      prev: '<i class="fa fa-chevron-left"></i>',
+      next: '<i class="fa fa-chevron-right"></i>',
     },
 
     legend: [
