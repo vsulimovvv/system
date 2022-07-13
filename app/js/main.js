@@ -3,14 +3,29 @@ window.addEventListener('DOMContentLoaded', () => {
   $('input[type="tel"]').mask('+7 (999) 999-99-99');
 
   // *Zabuto  Calendar
-  var eventData = [
-    { date: '2015-01-01', badge: false, title: 'Example 1' },
-    { date: '2015-01-02', badge: true, title: 'Example 2' },
+  const eventData = [
+    {
+      date: '2022-07-20',
+      badge: true,
+      title: 'Для новичков',
+      classname: 'newbies',
+    },
+    {
+      date: '2022-07-17',
+      badge: true,
+      title: 'Школа бизнеса',
+      classname: 'school-business',
+    },
+    {
+      date: '2022-07-22',
+      badge: true,
+      title: 'Выезд за город',
+      classname: 'out-town',
+    },
   ];
 
   $('#calendar').zabuto_calendar({
     language: 'ru',
-    today: true,
     data: eventData,
     nav_icon: {
       prev: '<i class="fa fa-chevron-left"></i>',

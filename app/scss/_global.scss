@@ -182,10 +182,45 @@ button {
 }
 
 .zabuto_calendar {
+  .badge-event {
+    padding-bottom: 8px !important;
+  }
+  .day {
+    padding: 0 !important;
+    background-color: transparent !important;
+
+    // ! Здесь я не понял как сделать правильно, поэтому сделал в зависимости от класса дня (day), у него есть дочерний элемент span (badge), если можно как то на прямую задать класс span'у, то это можно убрать
+    &.school-business {
+      span {
+        background-color: #ea5150;
+        box-shadow: 0px 8px 13px 0px rgba(188, 66, 65, 0.51);
+        color: var(--color-white);
+      }
+    }
+
+    &.newbies {
+      span {
+        background-color: #f2c335;
+        box-shadow: 0px 8px 13px 0px rgba(242, 195, 53, 0.51);
+        color: var(--color-white);
+      }
+    }
+
+    &.out-town {
+      span {
+        background-color: #5193dd;
+        box-shadow: 0px 8px 13px 0px rgba(81, 147, 221, 0.51);
+        color: var(--color-white);
+      }
+    }
+  }
+
   .badge {
     display: inline-block;
     padding: 10px;
     border-radius: 10px;
+
+    // ! Бейджики в самом календаре
 
     &.badge-today {
       background-color: #5193dd;
@@ -232,11 +267,12 @@ button {
       @include adaptive-value('font-size', 13, 11, 1);
       @include adaptive-value('gap', 5, 3, 1);
 
+      // ! Бейджики в легенде
       .badge {
         width: 17px;
         height: 17px;
         box-shadow: none;
-        
+
         @include breakpointsMaxW($bp-768) {
           height: 13px;
           width: 13px;
