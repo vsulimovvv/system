@@ -2,9 +2,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // * ===== Mask input
   $('input[type="tel"]').mask('+7 (999) 999-99-99');
 
-  // *Evo Calendar
-  // $('#calendar').evoCalendar();
-
   // *Zabuto  Calendar
   var eventData = [
     { date: '2015-01-01', badge: false, title: 'Example 1' },
@@ -36,20 +33,6 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     ],
   });
-
-  // * Vanilla Calendar
-  // (function calendar() {
-  //   const calendar = new VanillaCalendar('#calendar', {
-  //     settings: {
-  //       lang: 'ru',
-  //       selection: {
-  //         day: 'multiple',
-  //       },
-  //     },
-  //   });
-
-  //   calendar.init();
-  // })();
 
   // * ===== Slider
   (function slider() {
