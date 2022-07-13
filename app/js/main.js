@@ -2,6 +2,55 @@ window.addEventListener('DOMContentLoaded', () => {
   // * ===== Mask input
   $('input[type="tel"]').mask('+7 (999) 999-99-99');
 
+  // *Evo Calendar
+  // $('#calendar').evoCalendar();
+
+  // *Zabuto  Calendar
+  var eventData = [
+    { date: '2015-01-01', badge: false, title: 'Example 1' },
+    { date: '2015-01-02', badge: true, title: 'Example 2' },
+  ];
+
+  $('#calendar').zabuto_calendar({
+    language: 'ru',
+    today: true,
+    data: eventData,
+    nav_icon: {
+      prev: '<i class="fa fa-chevron-circle-left"></i>',
+      next: '<i class="fa fa-chevron-circle-right"></i>',
+    },
+
+    legend: [
+      {
+        type: 'text',
+        label: 'Школа бизнеса',
+        badge: '',
+        classname: 'school-business',
+      },
+      { type: 'text', label: 'Для новичков', badge: '', classname: 'newbies' },
+      {
+        type: 'text',
+        label: 'Выезд за город',
+        badge: '',
+        classname: 'out-town',
+      },
+    ],
+  });
+
+  // * Vanilla Calendar
+  // (function calendar() {
+  //   const calendar = new VanillaCalendar('#calendar', {
+  //     settings: {
+  //       lang: 'ru',
+  //       selection: {
+  //         day: 'multiple',
+  //       },
+  //     },
+  //   });
+
+  //   calendar.init();
+  // })();
+
   // * ===== Slider
   (function slider() {
     const sliderEl = document.querySelector('.reviews__slider');
