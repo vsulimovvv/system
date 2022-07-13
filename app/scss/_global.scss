@@ -190,39 +190,25 @@ button {
     &.badge-today {
       background-color: #5193dd;
       box-shadow: 0px 8px 13px 0px rgba(81, 147, 221, 0.51);
+      color: var(--color-white);
     }
 
     &.school-business {
       background-color: #ea5150;
-      width: 17px;
-      height: 17px;
-
-      @include breakpointsMaxW($bp-768) {
-        height: 13px;
-        width: 13px;
-      }
+      box-shadow: 0px 8px 13px 0px rgba(188, 66, 65, 0.51);
+      color: var(--color-white);
     }
 
     &.newbies {
       background-color: #f2c335;
-      width: 17px;
-      height: 17px;
-
-      @include breakpointsMaxW($bp-768) {
-        height: 13px;
-        width: 13px;
-      }
+      box-shadow: 0px 8px 13px 0px rgba(242, 195, 53, 0.51);
+      color: var(--color-white);
     }
 
     &.out-town {
       background-color: #5193dd;
-      width: 17px;
-      height: 17px;
-
-      @include breakpointsMaxW($bp-768) {
-        height: 13px;
-        width: 13px;
-      }
+      box-shadow: 0px 8px 13px 0px rgba(81, 147, 221, 0.51);
+      color: var(--color-white);
     }
   }
 
@@ -245,6 +231,29 @@ button {
 
       @include adaptive-value('font-size', 13, 11, 1);
       @include adaptive-value('gap', 5, 3, 1);
+
+      .badge {
+        width: 17px;
+        height: 17px;
+        box-shadow: none;
+        
+        @include breakpointsMaxW($bp-768) {
+          height: 13px;
+          width: 13px;
+        }
+
+        &.school-business {
+          background-color: #ea5150;
+        }
+
+        &.newbies {
+          background-color: #f2c335;
+        }
+
+        &.out-town {
+          background-color: #5193dd;
+        }
+      }
     }
   }
 
