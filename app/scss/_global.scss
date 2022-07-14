@@ -7,6 +7,7 @@ body {
   background-color: var(--color-white);
   position: relative;
   overflow-x: hidden;
+  // z-index: 1;
 
   &.no-scroll {
     overflow: hidden;
@@ -182,11 +183,11 @@ button {
 }
 
 .zabuto_calendar {
-  // display: none;
   border: none !important;
   box-shadow: none !important;
   overflow: hidden !important;
-  display: none;
+  z-index: -1;
+
   .badge-event {
     padding-bottom: 8px !important;
   }

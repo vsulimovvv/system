@@ -16,6 +16,9 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
 />
 
+<!-- bootstrap -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"> -->
+
 <!-- Choices JS  -->
 <link
   rel="stylesheet"
@@ -27,10 +30,11 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
 />
 
-<link
+<!-- <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-/>
+/> -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 
 <!--  zabuto_calendar -->
 <link
@@ -259,6 +263,28 @@
 
 
       <main class="main">
+        <section class="calendar">
+  <div class="container">
+    <div class="calendar__wrapper">
+      <div
+        class="calendar__preview"
+        style="background-image: url('images/content/calendar.jpg')"
+      ></div>
+      <div class="calendar__calendar">
+        <h2 class="calendar__title">
+          Календарь <span></span>
+          мероприятий
+        </h2>
+
+        <div id="date-popover" class="popover">
+          <div id="date-popover-content" class="popover-content"></div>
+        </div>
+        <div id="calendar" class="calendar__content"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
         <section class="mentors-page">
   <div class="container">
     <h2 class="mentors-page__title">Наши менторы</h2>
@@ -680,17 +706,20 @@
 
     </div>
 
-    <!-- Swiper JS -->
+    <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <!-- nouislider -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
 
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
 <!-- Choices JS -->
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!--  -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script> -->
 
 <!-- Input Mask -->
 <script
