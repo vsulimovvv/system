@@ -182,6 +182,11 @@ button {
 }
 
 .zabuto_calendar {
+  // display: none;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  display: none;
   .badge-event {
     padding-bottom: 8px !important;
   }
