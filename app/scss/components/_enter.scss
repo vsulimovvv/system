@@ -67,6 +67,7 @@
 
   &__text {
     @include adaptive-value('margin-bottom', 30, 20, 1);
+    color: var(--color-black);
   }
 
   &__item {

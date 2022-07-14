@@ -27,8 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   ];
 
-  console.log(eventData[1].time);
-
   function myDateFunction(id, fromModal) {
     $('#date-popover').hide();
     if (fromModal) {
