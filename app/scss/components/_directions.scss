@@ -39,6 +39,10 @@
 
     img {
       @include img(cover);
+
+      @include breakpointsMaxW($bp-768) {
+        @include img(contain);
+      }
     }
   }
 
