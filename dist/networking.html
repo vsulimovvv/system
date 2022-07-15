@@ -16,6 +16,9 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
 />
 
+<!-- bootstrap -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"> -->
+
 <!-- Choices JS  -->
 <link
   rel="stylesheet"
@@ -23,15 +26,24 @@
 />
 
 <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-/>
-
-<link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
 />
 
+<!-- <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/> -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+<!--  zabuto_calendar -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/zabuto_calendar/1.6.4/zabuto_calendar.min.css"
+  integrity="sha512-WRcIo/ywVhLZ5L/zO19ph3+xFT0fL4OZEQeP5oxbeUgcXvlWsDUuHq0ODulhxi68CaWQ9XEy1g5ictPkaxnfow=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
 <!-- Custom Link -->
 <link rel="stylesheet" href="css/style.min.css" />
 
@@ -42,11 +54,7 @@
   <body>
     <div class="popup popup--enter">
   <div class="popup__container">
-    <button class="popup__close" type="button" aria-label="Закрыть">
-      <svg width="15" height="15">
-        <use xlink:href="images/sprite.svg#close"></use>
-      </svg>
-    </button>
+    <button class="popup__close" type="button" aria-label="Закрыть"></button>
     <div class="popup__wrapper">
       <h2 class="popup__title">Вступить в клуб</h2>
       <div class="popup__text">
@@ -95,11 +103,7 @@
 
 <div class="popup popup--value">
   <div class="popup__container">
-    <button class="popup__close" type="button" aria-label="Закрыть">
-      <svg width="15" height="15">
-        <use xlink:href="images/sprite.svg#close"></use>
-      </svg>
-    </button>
+    <button class="popup__close" type="button" aria-label="Закрыть"></button>
     <div class="popup__wrapper">
       <img
         class="popup__img"
@@ -125,12 +129,10 @@
       <header class="header">
   <!-- Mobile Menu -->
 
-  <div class="overlay"></div>
-
   <div class="mobile-menu">
     <div class="mobile-menu__top">
-      <a class="mobile-menu__logo logo" href="#">
-        <img src="images/logo.png" alt="Логотип" />
+      <a class="mobile-menu__logo" href="#">
+        <img src="images/logo-menu.png" alt="Логотип" />
       </a>
 
       <button
@@ -147,10 +149,6 @@
     <div class="mobile-menu__body">
       <ul class="mobile-menu__list">
         <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="#">Нетворкинг + наставничество</a>
-        </li>
-
-        <li class="mobile-menu__item">
           <a class="mobile-menu__link" href="#">Бизнес разборы</a>
         </li>
 
@@ -164,6 +162,51 @@
       </ul>
 
       <a class="mobile-menu__btn" href="#">Вход для резидентов клуба</a>
+
+      <div class="socials socials--border">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a
+              class="socials__link socials__link--telegram"
+              href="#"
+              aria-label="telegram"
+            ></a>
+          </li>
+          <li>
+            <a
+              class="socials__link socials__link--whatsapp"
+              href="#"
+              aria-label="whatsapp"
+            ></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contacts-links">
+        <ul class="contacts-links__list">
+          <li class="contacts-links__item">
+            <a
+              class="contacts-links__link contacts-links__link--phone"
+              href="tel:+74951234567"
+            >
+              8 (495) 123 45 67
+            </a>
+          </li>
+          <li class="contacts-links__item">
+            <a
+              class="contacts-links__link contacts-links__link--mail"
+              href="mail:info@systema-club.ru"
+            >
+              info@systema-club.ru
+            </a>
+          </li>
+          <li class="contacts-links__item">
+            <address class="contacts-links__link contacts-links__link--address">
+              Москва, Название улицы 10, офис 11
+            </address>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -171,8 +214,9 @@
 
   <div class="container">
     <nav class="header__wrapper">
-      <a class="header__logo logo" href="#">
+      <a class="header__logo logo" href="index.html">
         <img src="images/logo.png" alt="Логотип" />
+        <span>бизнес — клуб для предпринимателей</span>
       </a>
 
       <div class="header__socials socials">
@@ -196,9 +240,6 @@
 
       <div class="header__menu menu">
         <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link" href="#">Нетворкинг + наставничество</a>
-          </li>
           <li class="menu__item">
             <a class="menu__link" href="#">Бизнес разборы</a>
           </li>
@@ -225,7 +266,7 @@
         <section class="hero hero--networking">
   <div class="container">
     <div class="hero__offer">
-      <h2 class="hero__title">Системный нетворкинг + наставничество</h2>
+      <h2 class="hero__title">Бизнес - разбор</h2>
 
       <div class="hero__text">
         <span>28 мая 2022 </span> | <span>16:00 – 20:00</span> | Москва,
@@ -233,7 +274,7 @@
       </div>
 
       <button class="hero__btn btn" type="button">
-        Записаться на нетворкинг
+        Записаться на бизнес-разбор
       </button>
     </div>
   </div>
@@ -261,15 +302,14 @@
           src="images/content/event-master.jpg"
           alt="Иван Кудин"
         />
-        <div class="event-master__info">
-          <h3 class="event-master__title">Ведущий</h3>
-          <p class="event-master__name">Иван Кудин</p>
-          <p class="event-master__text">
-            Провел более 35 оффлайн мероприятий, посвященных качественному
-            Нетворкингу. Разработал свою методику, которая позволит тебе быстро
-            входить в коммуникацию и решать свои запросы.
-          </p>
-        </div>
+
+        <h3 class="event-master__title">Ведущий</h3>
+        <p class="event-master__name">Иван Кудин</p>
+        <p class="event-master__text">
+          Провел более 35 оффлайн мероприятий, посвященных качественному
+          Нетворкингу. Разработал свою методику, которая позволит тебе быстро
+          входить в коммуникацию и решать свои запросы.
+        </p>
       </div>
     </div>
   </div>
@@ -453,139 +493,75 @@
         <section class="faqs">
   <div class="container">
     <div class="faqs__wrapper">
-      <div class="faqs__accordion">
-        <h2 class="faqs__title">Часто — задаваемые <span></span> вопросы</h2>
-
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                Как попасть в клуб?
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse show"
-              aria-labelledby="headingOne"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown.
-              </div>
-            </div>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button id="accordion-button-1" aria-expanded="false">
+            <span class="accordion-title">Как попасть в клуб?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing
+              and typesetting industry. Lorem Ipsum has been
+              the industry's standard dummy text ever since
+              the 1500s, when an unknown.
+            </p>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
-                Где проходят встречи?
-              </button>
-            </h2>
-            <div
-              id="collapseTwo"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingTwo"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown.
-              </div>
-            </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-2" aria-expanded="false">
+            <span class="accordion-title">Где проходят встречи?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing
+              and typesetting industry. Lorem Ipsum has been
+              the industry's standard dummy text ever since
+              the 1500s, when an unknown.
+            </p>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
-                aria-expanded="false"
-                aria-controls="collapseThree"
-              >
-                Сколько длятся встречи?
-              </button>
-            </h2>
-            <div
-              id="collapseThree"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingThree"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown.
-              </div>
-            </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-3" aria-expanded="false">
+            <span class="accordion-title">Сколько длятся встречи?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing
+              and typesetting industry. Lorem Ipsum has been
+              the industry's standard dummy text ever since
+              the 1500s, when an unknown.
+            </p>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
-                aria-expanded="false"
-                aria-controls="collapseFour"
-              >
-                Сколько стоит вступить в клуб?
-              </button>
-            </h2>
-            <div
-              id="collapseFour"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingFour"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown.
-              </div>
-            </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-4" aria-expanded="false">
+            <span class="accordion-title">Сколько стоит вступить в клуб?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing
+and typesetting industry. Lorem Ipsum has been
+the industry's standard dummy text ever since
+the 1500s, when an unknown.
+            </p>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFive">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFive"
-                aria-expanded="false"
-                aria-controls="collapseFive"
-              >
-                Что, если мне не понравится?
-              </button>
-            </h2>
-            <div
-              id="collapseFive"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingFive"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown.
-              </div>
-            </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">Что, если мне не понравится?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing
+and typesetting industry. Lorem Ipsum has been
+the industry's standard dummy text ever since
+the 1500s, when an unknown.
+            </p>
           </div>
         </div>
       </div>
@@ -868,6 +844,7 @@
     <h2 class="location__title">Мы находимся</h2>
   </div>
   <div class="location__map map">
+    <div class="location__text">м Тульская, ул. Название улицы 10, офис 11</div>
     <iframe
       src="https://yandex.ru/map-widget/v1/?um=constructor%3A5fd63bb7b65759a7388706499a392f23475078eed788313cce5cb3818d0f21ee&amp;source=constructor"
       width="500"
@@ -878,58 +855,70 @@
 
       </main>
       <footer class="footer">
-  <div class="footer__top">
-    <div class="container">
-      <div class="footer__top-inner">
-        <a class="footer__logo logo" href="#">
-          <img src="images/logo.png" alt="Логотип" />
-        </a>
+  <div class="container">
+    <div class="footer__top">
+      <a class="footer__logo logo" href="#">
+        <img src="images/logo.png" alt="Логотип" />
+        <span>бизнес — клуб для предпринимателей</span>
+      </a>
 
-        <div class="footer__socials socials socials--border">
-          <ul class="socials__list">
-            <li class="socials__item">
-              <a
-                class="socials__link socials__link--telegram"
-                href="#"
-                aria-label="telegram"
-              ></a>
-            </li>
-            <li>
-              <a
-                class="socials__link socials__link--whatsapp"
-                href="#"
-                aria-label="whatsapp"
-              ></a>
-            </li>
-          </ul>
-        </div>
+      <div class="footer__socials socials socials--border">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a
+              class="socials__link socials__link--telegram"
+              href="#"
+              aria-label="telegram"
+            ></a>
+          </li>
+          <li>
+            <a
+              class="socials__link socials__link--whatsapp"
+              href="#"
+              aria-label="whatsapp"
+            ></a>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
 
-  <div class="footer__bottom">
-    <div class="container">
-      <p>
+    <div class="footer__bottom">
+      <p class="footer__text">
         © 2022 Система. Все права защищены.
         <a href="#">Политика конфиденциальности.</a>
       </p>
+
+      <div class="footer__developed developed">
+        <span class="developed__text">Разработка сайта:</span>
+
+        <a
+          class="developed__logo"
+          href="https://razrabotka-saita.ru/"
+          target="_blank"
+        >
+          <img src="images/logo-company.png" alt="Адванс Медия" />
+        </a>
+      </div>
     </div>
   </div>
 </footer>
 
     </div>
 
-    <!-- Swiper JS -->
+    <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <!-- nouislider -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
 
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
 <!-- Choices JS -->
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!--  -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script> -->
 
 <!-- Input Mask -->
 <script
@@ -937,9 +926,15 @@
   type="text/javascript"
 ></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- Zabuto -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/zabuto_calendar/1.6.4/zabuto_calendar.min.js"
+  integrity="sha512-HvdZfHEdDyE5r66O4BLg+GE/kCwpviitPcq/H5L2gmr1P+tqDKBUfY9UP7ll6Idle+zeulQDXYYKbTiiUwLF+Q=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
 
 <!-- JS -->
 <script src="js/main.min.js"></script>
