@@ -7,7 +7,6 @@ body {
   background-color: var(--color-white);
   position: relative;
   overflow-x: hidden;
-  // z-index: 1;
 
   &.no-scroll {
     overflow: hidden;
@@ -182,153 +181,9 @@ button {
   }
 }
 
-.zabuto_calendar {
-  border: none !important;
-  box-shadow: none !important;
-  overflow: hidden !important;
-  z-index: -1;
-
-  .badge-event {
-    padding-bottom: 8px !important;
-  }
-  .day {
-    padding: 0 !important;
-    background-color: transparent !important;
-
-    // ! Здесь я не понял как сделать правильно, поэтому сделал в зависимости от класса дня (day), у него есть дочерний элемент span (badge), если можно как то на прямую задать класс span'у, то это можно убрать
-    &.school-business {
-      span {
-        background-color: #ea5150;
-        box-shadow: 0px 8px 13px 0px rgba(188, 66, 65, 0.51);
-        color: var(--color-white);
-      }
-    }
-
-    &.newbies {
-      span {
-        background-color: #f2c335;
-        box-shadow: 0px 8px 13px 0px rgba(242, 195, 53, 0.51);
-        color: var(--color-white);
-      }
-    }
-
-    &.out-town {
-      span {
-        background-color: #5193dd;
-        box-shadow: 0px 8px 13px 0px rgba(81, 147, 221, 0.51);
-        color: var(--color-white);
-      }
-    }
-  }
-
-  .badge {
-    display: inline-block;
-    padding: 10px;
-    border-radius: 10px;
-
-    // ! Бейджики в самом календаре
-
-    &.badge-today {
-      background-color: #5193dd;
-      box-shadow: 0px 8px 13px 0px rgba(81, 147, 221, 0.51);
-      color: var(--color-white);
-    }
-
-    &.school-business {
-      background-color: #ea5150;
-      box-shadow: 0px 8px 13px 0px rgba(188, 66, 65, 0.51);
-      color: var(--color-white);
-    }
-
-    &.newbies {
-      background-color: #f2c335;
-      box-shadow: 0px 8px 13px 0px rgba(242, 195, 53, 0.51);
-      color: var(--color-white);
-    }
-
-    &.out-town {
-      background-color: #5193dd;
-      box-shadow: 0px 8px 13px 0px rgba(81, 147, 221, 0.51);
-      color: var(--color-white);
-    }
-  }
-
-  .legend {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px !important;
-
-    @include adaptive-value('gap', 15, 10, 1);
-
-    .legend-text {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 13px;
-      line-height: 1;
-      color: #484848;
-
-      @include adaptive-value('font-size', 13, 11, 1);
-      @include adaptive-value('gap', 5, 3, 1);
-
-      // ! Бейджики в легенде
-      .badge {
-        width: 17px;
-        height: 17px;
-        box-shadow: none;
-
-        @include breakpointsMaxW($bp-768) {
-          height: 13px;
-          width: 13px;
-        }
-
-        &.school-business {
-          background-color: #ea5150;
-        }
-
-        &.newbies {
-          background-color: #f2c335;
-        }
-
-        &.out-town {
-          background-color: #5193dd;
-        }
-      }
-    }
-  }
-
-  .calendar-dow-header {
-    position: relative;
-
-    &::after {
-      @include elDef();
-      width: 100%;
-      height: 1px;
-      background-color: #eee;
-      left: 0;
-      bottom: -5px;
-    }
-
-    th {
-      color: #a9a9a9;
-      background-color: var(--color-white) !important;
-    }
-  }
+.vanilla-calendar-header {
+  max-width: calc(100% - 20px) !important;
 }
-
-.popover-content {
-  padding: 16px;
-  box-shadow: 0px 7px 43px 0px rgba(189, 189, 189, 0.76);
-  border-radius: 10px;
-  background-color: var(--color-white);
-  font-size: 13px;
-  line-height: 31px;
-  font-weight: 500;
-  color: #000000;
-}
-
-.popover {
-  position: absolute;
+.vanilla-calendar-arrow_prev{
+  transform: rotateZ(180deg) translateX(-20px);
 }

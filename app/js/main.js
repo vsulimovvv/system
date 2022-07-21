@@ -2,87 +2,32 @@ window.addEventListener('DOMContentLoaded', () => {
   // * ===== Mask input
   $('input[type="tel"]').mask('+7 (999) 999-99-99');
 
-  // *Zabuto  Calendar
-  const eventData = [
-    {
-      date: '2022-07-20',
-      badge: true,
-      classname: 'newbies',
-      title: 'Для новичков',
-      time: '15:00',
-    },
-    {
-      date: '2022-07-17',
-      badge: true,
-      classname: 'school-business',
-      title: 'Школа бизнеса',
-      time: '18:00',
-    },
-    {
-      date: '2022-07-22',
-      badge: true,
-      classname: 'out-town',
-      title: 'Выезд за город',
-      time: '21:00',
-    },
-  ];
+  // * Vanilla Calendar
+  (function calendar() {
+    const calendar = new VanillaCalendar('#calendar', {
+      settings: {
+        lang: 'ru',
+        selection: {
+          // day: 'multiple',
+        },
+      },
+    });
 
-  function myDateFunction(id, fromModal) {
-    $('#date-popover').hide();
-    if (fromModal) {
-      $('#' + id + '_modal').modal('hide');
-    }
-    var title = $('#' + id).attr('title');
+    calendar.init();
+  })();
 
-    var time = '';
-    $.each(eventData, function (id, data) {
-      console.log(id);
-      $.each(data, function (index, value) {
-        if (index === 'time') {
-          time = value;
-        }
+  function showCalendarModal() {
+    const days = document.querySelectorAll('.vanilla-calendar-day');
+    const popup = document.querySelector('.calendar__popup');
+
+    days.forEach((day) => {
+      day.addEventListener('click', (e) => {
+        popup.classList.add('active');
       });
     });
-    console.log(time);
-
-    if (fromModal) {
-      $('#' + id + '_modal').modal('hide');
-    }
-
-    $('#date-popover-content').html(time + '<br />' + title);
-    $('#date-popover').show();
-    return true;
   }
 
-  $('#calendar').zabuto_calendar({
-    language: 'ru',
-    data: eventData,
-    nav_icon: {
-      prev: '<i class="fa fa-chevron-left"></i>',
-      next: '<i class="fa fa-chevron-right"></i>',
-    },
-
-    action: function () {
-      return myDateFunction(this.id);
-    },
-
-    legend: [
-      {
-        type: 'text',
-        label: 'Школа бизнеса',
-        badge: '',
-        classname: 'school-business',
-      },
-      { type: 'text', label: 'Для новичков', badge: '', classname: 'newbies' },
-      {
-        type: 'text',
-        label: 'Выезд за город',
-        badge: '',
-        classname: 'out-town',
-      },
-    ],
-  });
-
+  showCalendarModal();
   // * ===== Slider
   (function slider() {
     const sliderEl = document.querySelector('.reviews__slider');
