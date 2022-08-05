@@ -4762,3 +4762,108 @@ button:hover {
   font-size: 13px;
   font-weight: 400;
 }
+
+.login {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (max-width: 1270px) {
+  .login {
+    padding-top: calc(
+        50px + 30 *
+          ((100vw - 375px) / 895)
+      );
+  }
+}
+@media (max-width: 1270px) {
+  .login {
+    padding-bottom: calc(
+        50px + 30 *
+          ((100vw - 375px) / 895)
+      );
+  }
+}
+.login__wrapper {
+  max-width: 370px;
+  width: 100%;
+  margin: 0 auto;
+}
+.login__title {
+  font-size: 35px;
+  line-height: 1.3;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+@media (max-width: 1270px) {
+  .login__title {
+    font-size: calc(
+        25px + 10 *
+          ((100vw - 375px) / 895)
+      );
+  }
+}
+@media (max-width: 1270px) {
+  .login__title {
+    margin-bottom: calc(
+        30px + 20 *
+          ((100vw - 375px) / 895)
+      );
+  }
+}
+
+.form-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.form-login__group:not(:last-child) {
+  margin-bottom: 15px;
+}
+.form-login__group:last-child {
+  margin-bottom: 25px;
+}
+.form-login__btn {
+  width: 100%;
+}
+.form-login__input {
+  background-color: #f1f1f1;
+  border-radius: 27px;
+  width: 100%;
+  padding: 15px 30px;
+  height: 55px;
+}
+.form-login__input::-webkit-input-placeholder {
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 500;
+  color: #6f6f6f;
+}
+.form-login__input::-moz-placeholder {
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 500;
+  color: #6f6f6f;
+}
+.form-login__input:-ms-input-placeholder {
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 500;
+  color: #6f6f6f;
+}
+.form-login__input::-ms-input-placeholder {
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 500;
+  color: #6f6f6f;
+}
+.form-login__input::placeholder {
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 500;
+  color: #6f6f6f;
+}
