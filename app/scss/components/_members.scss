@@ -175,9 +175,78 @@
 .members-filters {
   display: grid;
   gap: 30px;
-  
+
   @include breakpointsMaxW($bp-991) {
     display: none;
+  }
+
+  &--mobile {
+    display: none;
+
+    @include breakpointsMaxW($bp-991) {
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 60px);
+      overflow-y: auto;
+    }
+
+    .members-filters {
+      &__btn {
+        margin-top: auto;
+      }
+      &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &__name {
+        font-weight: 600;
+      }
+
+      &__close {
+        width: 14px;
+        height: 14px;
+        transition: 150ms ease;
+        position: relative;
+
+        &::after {
+          @include elDef();
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          @include maskImage(url('../images/icons/close.svg'), contain);
+          background-color: var(--color-black);
+        }
+      }
+
+      &__search {
+        max-width: 100%;
+        position: relative;
+
+        &-input {
+          display: block;
+          width: 100%;
+          height: 49px;
+          background-color: #f2f2f2;
+          border-radius: 5px;
+          outline: transparent;
+          padding: 20px 20px 20px 60px;
+        }
+
+        &::after {
+          @include elDef();
+          width: 19px;
+          height: 19px;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          @include maskImage(url('../images/icons/search.svg'), contain);
+          background-color: #b9b9b9;
+        }
+      }
+    }
   }
 
   &__name {
@@ -203,6 +272,11 @@
     line-height: 25px;
     font-weight: 500;
     color: #4f4f4f;
+    transition: 200ms ease;
+
+    &:hover {
+      color: var(--color-accent);
+    }
 
     &:not(:last-child) {
       margin-right: 10px;
@@ -213,5 +287,23 @@
     border-radius: 5px;
     font-size: 15px;
     font-weight: 500;
+  }
+}
+
+.filters-mobile {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-white);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transform: translateX(-100%);
+  transition: 400ms ease;
+  padding: 20px 0;
+
+  @include breakpointsMaxW($bp-991) {
+    display: block;
   }
 }

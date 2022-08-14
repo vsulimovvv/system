@@ -51,6 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   showCalendarModal();
+
   // * ===== Slider
   (function slider() {
     const sliderEl = document.querySelector('.reviews__slider');
@@ -167,6 +168,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
     menuCloseBtn.addEventListener('click', (e) => {
       menu.style.transform = 'translateX(-100%)';
+      body.classList.remove('no-scroll');
+    });
+  })();
+
+  // * ===== Show Menu
+  (function showFilters() {
+    const filtersBtn = document.querySelector('.header-profile__btn-filter');
+    const filters = document.querySelector('.filters-mobile');
+    const filtersCloseBtn = document.querySelector('.members-filters__close');
+    const body = document.querySelector('body');
+
+    filtersBtn.addEventListener('click', (e) => {
+      filters.style.transform = 'translateX(0)';
+      body.classList.toggle('no-scroll');
+    });
+
+    filtersCloseBtn.addEventListener('click', (e) => {
+      filters.style.transform = 'translateX(-100%)';
       body.classList.remove('no-scroll');
     });
   })();

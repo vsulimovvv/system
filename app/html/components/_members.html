@@ -1,4 +1,124 @@
 <section class="members">
+  <div class="filters-mobile">
+    <div class="container">
+      <form class="members-filters members-filters--mobile">
+        <div class="members-filters__top">
+          <span class="members-filters__name">Фильтры</span>
+          <button class="members-filters__reset" type="reset">Очистить</button>
+          <button
+            class="members-filters__close"
+            type="button"
+            aria-label="Закрыть"
+          ></button>
+        </div>
+        <div class="members-filters__search">
+          <input
+            class="members-filters__search-input"
+            type="text"
+            placeholder="Поиск"
+          />
+        </div>
+        <div class="members-filters__group">
+          <p class="members-filters__name">Ниша</p>
+          <select class="members-filters__select select" id="niche" name="Ниша">
+            <option value="">Выбрать нишу</option>
+            <option value="1">Строительство</option>
+            <option value="2">Металлургия</option>
+          </select>
+        </div>
+        <div class="members-filters__group">
+          <p class="members-filters__name">Доход</p>
+          <select
+            class="members-filters__select select"
+            id="income"
+            name="Доход"
+          >
+            <option value="">Выбрать доход</option>
+            <option value="1">до 300 тысяч</option>
+            <option value="2">от 300 тысяч до 1 миллиона</option>
+            <option value="2">более 1 миллиона</option>
+          </select>
+        </div>
+        <div class="members-filters__group">
+          <p class="members-filters__name">Связи</p>
+          <div class="members-filters__tags">
+            <button class="members-filters__tag" type="button">
+              #строительство
+            </button>
+            <button class="members-filters__tag" type="button">
+              #недвижимость
+            </button>
+            <button class="members-filters__tag" type="button">
+              #строительные_материалы
+            </button>
+          </div>
+        </div>
+        <div class="members-filters__group">
+          <p class="members-filters__name">Хобби</p>
+          <select
+            class="members-filters__select select"
+            id="income"
+            name="Доход"
+          >
+            <option value="">Выбрать хобби</option>
+            <option value="1">туризм</option>
+            <option value="2">горнолыжка</option>
+          </select>
+        </div>
+
+        <button class="members-filters__btn btn" type="submit">
+          Показать результаты
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="header-profile header-profile--bg-white">
+    <div class="container">
+      <div class="header-profile__inner">
+        <div class="header-profile__left">Все участники</div>
+
+        <form class="header-profile-search">
+          <input
+            class="header-profile-search__input"
+            type="text"
+            placeholder="Поиск"
+          />
+        </form>
+
+        <button
+          class="header-profile__btn-filter"
+          type="button"
+          aria-label="показать фильтры"
+        ></button>
+
+        <div class="header-profile-nav">
+          <ul class="header-profile-nav__list">
+            <li class="header-profile-nav__item">
+              <a class="header-profile-nav__link" href="profile.html"
+                >Профиль</a
+              >
+            </li>
+            <li class="header-profile-nav__item">
+              <a class="header-profile-nav__link active" href="members.html">
+                Все участники
+              </a>
+            </li>
+            <li class="header-profile-nav__item">
+              <a
+                class="header-profile-nav__link header-profile-nav__link--telegram"
+                href="#"
+                target="_blank"
+              >
+                Написать директору
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <div class="members__wrapper">
       <ul class="members__list">
