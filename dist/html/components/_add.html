@@ -1,0 +1,140 @@
+<section class="add">
+  <div class="container">
+    <h2 class="add__title">Добавление участника</h2>
+    <div class="add__wrapper">
+      <form class="form-add">
+        <div class="form-add__group">
+          <label class="form-add__name" for="name">ФИО</label>
+          <input
+            class="form-add__input"
+            type="text"
+            name="фио"
+            id="name"
+            placeholder="Введите ФИО участника"
+          />
+        </div>
+        <div class="form-add__group">
+          <label class="form-add__name" for="dob">Дата рождения</label>
+          <input
+            class="form-add__input"
+            type="text"
+            name="fio"
+            id="dob"
+            placeholder="xx/xx/xxxx"
+          />
+        </div>
+        <div class="form-add__group">
+          <p class="form-add__name">Город</p>
+          <select class="form-add__select select" id="niche" name="Ниша">
+            <option value="">Выбрать Город</option>
+            <option value="1">Москва</option>
+            <option value="2">Бостон</option>
+            <option value="2">Детройт</option>
+          </select>
+        </div>
+
+        <div class="members-filters__group">
+          <p class="members-filters__name">Ниша</p>
+          <select class="members-filters__select select" id="niche" name="Ниша">
+            <option value="">Выбрать нишу</option>
+            <option value="1">Строительство</option>
+            <option value="2">Металлургия</option>
+          </select>
+        </div>
+
+        <div class="form-add__group">
+          <p class="form-add__name">Доход чистыми</p>
+          <select class="form-add__select select" id="income" name="Доход">
+            <option value="">Выбрать доход</option>
+            <option value="1">до 300 тысяч</option>
+            <option value="2">от 300 тысяч до 1 миллиона</option>
+            <option value="2">более 1 миллиона</option>
+          </select>
+        </div>
+
+        <div class="form-add__group">
+          <p class="form-add__name">Хобби</p>
+          <select class="form-add__select select" id="income" name="Доход">
+            <option value="">Выбрать хобби</option>
+            <option value="1">туризм</option>
+            <option value="2">горнолыжка</option>
+          </select>
+        </div>
+
+        <div class="form-add__group">
+          <label class="form-add__name">Дарю клубу один час</label>
+          <textarea
+            class="form-add__input form-add__input--textarea"
+            type="text"
+            name="fio"
+          ></textarea>
+        </div>
+        <div class="form-add__group">
+          <label class="form-add__name">Может дать клубу со скидкой</label>
+          <textarea
+            class="form-add__input form-add__input--textarea"
+            type="text"
+            name="fio"
+          ></textarea>
+        </div>
+
+        <div class="form-add__group">
+          <p class="form-add__name">Связи</p>
+          <div class="form-add__tags">
+            <button class="form-add__tag" type="button">#строительство</button>
+            <button class="form-add__tag" type="button">#недвижимость</button>
+            <button class="form-add__tag" type="button">
+              #строительные_материалы
+            </button>
+          </div>
+        </div>
+
+        <div class="form-add__group">
+          <p class="form-add__name">Загрузить фото</p>
+          <label
+            class="custom-file-upload custom-file-upload--copy-inn"
+            for="copy-inn"
+          >
+            загрузите фото участника <span></span>
+          </label>
+          <input
+            id="copy-inn"
+            type="file"
+            name="copy-inn"
+            class="input-file-upload"
+            multiple
+          />
+        </div>
+
+        <div class="form-add__group">
+          <label class="form-add__name">Телефон участника</label>
+          <input
+            class="form-add__input"
+            type="tel"
+            placeholder="+7 (xxx) xxx - xx - xx"
+          />
+        </div>
+        <div class="form-add__group">
+          <label class="form-add__name">Telegram участника</label>
+          <input
+            class="form-add__input"
+            type="text"
+            placeholder="Введите ссылку или логин"
+          />
+        </div>
+        <div class="form-add__group">
+          <label class="form-add__name">Instagram участника</label>
+          <input
+            class="form-add__input"
+            type="text"
+            placeholder="Введите ссылку или логин"
+          />
+        </div>
+
+        <button class="form-add__btn btn" type="submit">
+          Показать результаты
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

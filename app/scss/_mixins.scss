@@ -97,12 +97,20 @@ $maxWidthContainer: 1270;
     );
   }
 }
+
 @mixin fz26() {
   @include adaptive-value('font-size', 26, 20, 1);
   line-height: 1.2;
   font-weight: 500;
   color: var(--color-black);
 }
+@mixin fz30() {
+  @include adaptive-value('font-size', 30, 20, 1);
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
 @mixin fz35() {
   @include adaptive-value('font-size', 35, 20, 1);
   font-size: 35px;

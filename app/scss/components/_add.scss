@@ -1,0 +1,14 @@
+.add {
+  &__title {
+    @include fz26();
+    font-weight: 400;
+    text-align: center;
+    @include adaptive-value('margin-bottom', 50, 40, 1);
+  }
+
+  &__wrapper {
+    max-width: 705px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

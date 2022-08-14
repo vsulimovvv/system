@@ -1,0 +1,57 @@
+.form-add {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+
+  @include breakpointsMaxW($bp-768) {
+    gap: 35px 20px;
+  }
+
+  @include breakpointsMaxW($bp-576) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__name {
+    font-size: 13px;
+    line-height: 1;
+    color: #4f4f4f;
+    margin-bottom: 15px;
+    
+    @include breakpointsMaxW($bp-576) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__select,
+  &__input {
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    font-size: 15px;
+  }
+
+  &__input {
+    padding: 10px 20px;
+
+    &--textarea {
+      height: 80px;
+    }
+  }
+
+  &__btn {
+    height: 45px;
+    border-radius: 5px;
+    margin-top: auto;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 500;
+  }
+}
