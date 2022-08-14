@@ -570,6 +570,9 @@ input[type=file] {
   background-color: var(--color-accent);
   color: var(--color-white);
 }
+.header-profile__left {
+  color: var(--color-white);
+}
 @media (max-width: 767.98px) {
   .header-profile {
     height: 140px;
@@ -723,7 +726,8 @@ input[type=file] {
   background-color: var(--color-white);
   color: var(--color-black);
 }
-.header-profile--bg-white__left {
+.header-profile--bg-white .header-profile__left {
+  color: var(--color-black);
   font-weight: 600;
 }
 .header-profile--bg-white .header-profile-nav__link {
@@ -771,6 +775,79 @@ input[type=file] {
   border-radius: 5px;
   outline: transparent;
   padding: 20px 20px 20px 60px;
+}
+
+.fix-nav {
+  display: none;
+  background-color: #f0f0f0;
+  color: var(--color-dark);
+  padding: 10px 0;
+}
+@media (max-width: 991.98px) {
+  .fix-nav {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+}
+.fix-nav__text {
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 500;
+  color: #7b7b7b;
+}
+.fix-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 576px) {
+  .fix-nav__list {
+    gap: 3px;
+  }
+}
+@media (max-width: 359.98px) {
+  .fix-nav__list {
+    gap: 0;
+  }
+}
+.fix-nav__item {
+  width: 110px;
+}
+.fix-nav__img {
+  width: 25px;
+  height: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 10px;
+}
+.fix-nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.fix-nav__link--user .fix-nav__img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 @-webkit-keyframes opacity-visibility {
@@ -5837,6 +5914,9 @@ input[type=file] {
   }
 }
 
+.add {
+  padding-top: 50px;
+}
 .add__title {
   font-size: 26px;
   line-height: 1.2;

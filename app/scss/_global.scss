@@ -240,6 +240,10 @@ input[type='file'] {
   background-color: var(--color-accent);
   color: var(--color-white);
 
+  &__left {
+    color: var(--color-white);
+  }
+
   @include breakpointsMaxW($bp-768) {
     height: 140px;
   }
@@ -365,8 +369,11 @@ input[type='file'] {
     background-color: var(--color-white);
     color: var(--color-black);
 
-    &__left {
-      font-weight: 600;
+    .header-profile {
+      &__left {
+        color: var(--color-black);
+        font-weight: 600;
+      }
     }
 
     .header-profile-nav {
@@ -424,5 +431,68 @@ input[type='file'] {
     border-radius: 5px;
     outline: transparent;
     padding: 20px 20px 20px 60px;
+  }
+}
+
+.fix-nav {
+  display: none;
+  background-color: #f0f0f0;
+  color: var(--color-dark);
+  padding: 10px 0;
+
+  @include breakpointsMaxW($bp-991) {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  &__text {
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 500;
+    color: #7b7b7b;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @include breakpointsMaxW($bp-576) {
+      gap: 3px;
+    }
+    @include breakpointsMaxW($bp-360) {
+      gap: 0;
+    }
+  }
+
+  &__item {
+    width: 110px;
+  }
+
+  &__img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &--user {
+      .fix-nav__img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    }
   }
 }
