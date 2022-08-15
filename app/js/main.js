@@ -25,6 +25,15 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+  (function addTags() {
+    const tags = document.querySelectorAll('.form-add__tag');
+    tags.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        el.classList.toggle('active');
+      });
+    });
+  })();
+
   // * Vanilla Calendar
   (function calendar() {
     const calendar = new VanillaCalendar('#calendar', {
@@ -179,15 +188,17 @@ window.addEventListener('DOMContentLoaded', () => {
     const filtersCloseBtn = document.querySelector('.members-filters__close');
     const body = document.querySelector('body');
 
-    filtersBtn.addEventListener('click', (e) => {
-      filters.style.transform = 'translateX(0)';
-      body.classList.toggle('no-scroll');
-    });
+    if (filtersBtn) {
+      filtersBtn.addEventListener('click', (e) => {
+        filters.style.transform = 'translateX(0)';
+        body.classList.toggle('no-scroll');
+      });
 
-    filtersCloseBtn.addEventListener('click', (e) => {
-      filters.style.transform = 'translateX(-100%)';
-      body.classList.remove('no-scroll');
-    });
+      filtersCloseBtn.addEventListener('click', (e) => {
+        filters.style.transform = 'translateX(-100%)';
+        body.classList.remove('no-scroll');
+      });
+    }
   })();
 
   function modalNeed() {

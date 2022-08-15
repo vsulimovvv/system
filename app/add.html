@@ -328,9 +328,10 @@
           <input
             class="form-add__input"
             type="text"
-            name="фио"
+            name="name"
             id="name"
             placeholder="Введите ФИО участника"
+            required
           />
         </div>
         <div class="form-add__group">
@@ -338,63 +339,82 @@
           <input
             class="form-add__input"
             type="text"
-            name="fio"
+            name="dob"
             id="dob"
             placeholder="xx/xx/xxxx"
+            required
           />
         </div>
         <div class="form-add__group">
-          <p class="form-add__name">Город</p>
-          <select class="form-add__select select" id="niche" name="Ниша">
-            <option value="">Выбрать Город</option>
-            <option value="1">Москва</option>
-            <option value="2">Бостон</option>
-            <option value="2">Детройт</option>
-          </select>
+          <label class="form-add__name" for="city">Город</label>
+          <input
+            class="form-add__input"
+            type="text"
+            name="city"
+            id="city"
+            placeholder="Введите Ваш город"
+            required
+          />
         </div>
 
         <div class="members-filters__group">
-          <p class="members-filters__name">Ниша</p>
-          <select class="members-filters__select select" id="niche" name="Ниша">
-            <option value="">Выбрать нишу</option>
-            <option value="1">Строительство</option>
-            <option value="2">Металлургия</option>
-          </select>
+          <label class="form-add__name" for="niche">Ниша</label>
+          <input
+            class="form-add__input"
+            type="text"
+            name="niche"
+            id="niche"
+            placeholder="Введите нишу"
+            required
+          />
         </div>
 
         <div class="form-add__group">
-          <p class="form-add__name">Доход чистыми</p>
-          <select class="form-add__select select" id="income" name="Доход">
-            <option value="">Выбрать доход</option>
-            <option value="1">до 300 тысяч</option>
-            <option value="2">от 300 тысяч до 1 миллиона</option>
-            <option value="2">более 1 миллиона</option>
-          </select>
+          <label class="form-add__name" for="income">Доход чистыми</label>
+          <input
+            class="form-add__input"
+            type="text"
+            name="income"
+            id="income"
+            placeholder="Введите Ваш доход"
+            required
+          />
         </div>
 
         <div class="form-add__group">
-          <p class="form-add__name">Хобби</p>
-          <select class="form-add__select select" id="income" name="Доход">
-            <option value="">Выбрать хобби</option>
-            <option value="1">туризм</option>
-            <option value="2">горнолыжка</option>
-          </select>
+          <label class="form-add__name" for="hobby">Хобби</label>
+          <input
+            class="form-add__input"
+            type="text"
+            name="hobby"
+            id="hobby"
+            placeholder="Перечислите Ваше хобби"
+            required
+          />
         </div>
 
         <div class="form-add__group">
-          <label class="form-add__name">Дарю клубу один час</label>
+          <label class="form-add__name" for="give-hour">
+            Дарю клубу один час
+          </label>
           <textarea
             class="form-add__input form-add__input--textarea"
             type="text"
-            name="fio"
+            name="give-hour"
+            id="give-hour"
+            required
           ></textarea>
         </div>
         <div class="form-add__group">
-          <label class="form-add__name">Может дать клубу со скидкой</label>
+          <label class="form-add__name" for="discount">
+            Может дать клубу со скидкой
+          </label>
           <textarea
             class="form-add__input form-add__input--textarea"
             type="text"
-            name="fio"
+            name="discount"
+            id="discount"
+            required
           ></textarea>
         </div>
 
@@ -422,24 +442,32 @@
             type="file"
             name="copy-inn"
             class="input-file-upload"
-            multiple
+            required
           />
         </div>
 
         <div class="form-add__group">
-          <label class="form-add__name">Телефон участника</label>
+          <label class="form-add__name" for="tel">Телефон участника</label>
           <input
             class="form-add__input"
             type="tel"
+            name="tel"
+            id="tel"
             placeholder="+7 (xxx) xxx - xx - xx"
+            required
           />
         </div>
         <div class="form-add__group">
-          <label class="form-add__name">Telegram участника</label>
+          <label class="form-add__name" for="telegram">
+            Telegram участника
+          </label>
           <input
             class="form-add__input"
             type="text"
+            id="telegram"
+            name="telegram"
             placeholder="Введите ссылку или логин"
+            required
           />
         </div>
         <div class="form-add__group">
@@ -448,6 +476,7 @@
             class="form-add__input"
             type="text"
             placeholder="Введите ссылку или логин"
+            required
           />
         </div>
 
@@ -498,7 +527,7 @@
 
       </main>
       
-      <footer class="footer">
+      <footer class="footer footer--without-bottom">
   <div class="container">
     <div class="footer__top">
       <a class="footer__logo logo" href="#">

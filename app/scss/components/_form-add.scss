@@ -23,7 +23,7 @@
     line-height: 1;
     color: #4f4f4f;
     margin-bottom: 15px;
-    
+
     @include breakpointsMaxW($bp-576) {
       margin-bottom: 12px;
     }
@@ -53,5 +53,24 @@
     font-size: 15px;
     line-height: 1;
     font-weight: 500;
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+    line-height: 1.4;
+    transition: 200ms ease;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &.active,
+    &:hover {
+      color: var(--color-accent);
+    }
   }
 }

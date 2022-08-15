@@ -1220,8 +1220,6 @@ input[type=file] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-animation: opacity-visibility 500ms ease forwards;
-          animation: opacity-visibility 500ms ease forwards;
 }
 .popup__container {
   width: calc(100% - 40px);
@@ -1577,7 +1575,7 @@ input[type=file] {
   border-color: var(--color-black);
 }
 .mobile-menu__btn:hover::after {
-  background-color: var(--color-black);
+  background-color: var(--color-white);
 }
 .mobile-menu__btn:active {
   -webkit-transform: scale(0.98);
@@ -2016,6 +2014,16 @@ input[type=file] {
 @media (max-width: 767.98px) {
   .footer__bottom a {
     display: block;
+  }
+}
+@media (max-width: 991.98px) {
+  .footer--without-bottom {
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 991.98px) {
+  .footer--without-bottom .footer__bottom {
+    display: none;
   }
 }
 
@@ -5916,6 +5924,7 @@ input[type=file] {
 
 .add {
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 .add__title {
   font-size: 26px;
@@ -6010,4 +6019,26 @@ input[type=file] {
   font-size: 15px;
   line-height: 1;
   font-weight: 500;
+}
+.form-add__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.form-add__tag {
+  line-height: 1.4;
+  -webkit-transition: 200ms ease;
+  -o-transition: 200ms ease;
+  transition: 200ms ease;
+}
+.form-add__tag:not(:last-child) {
+  margin-right: 10px;
+}
+.form-add__tag.active, .form-add__tag:hover {
+  color: var(--color-accent);
 }
