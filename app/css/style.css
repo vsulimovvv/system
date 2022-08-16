@@ -6030,16 +6030,16 @@ input[type=file] {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.form-add__tag {
+.tag {
   line-height: 1.4;
   -webkit-transition: 200ms ease;
   -o-transition: 200ms ease;
   transition: 200ms ease;
   cursor: pointer;
 }
-.form-add__tag:not(:last-child) {
+.tag:not(:last-child) {
   margin-right: 10px;
 }
-.form-add__tag.active, .form-add__tag:hover {
+.tag.active, .tag:hover {
   color: var(--color-accent);
 }

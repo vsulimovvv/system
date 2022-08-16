@@ -62,17 +62,20 @@
   }
 
   &__tag {
-    line-height: 1.4;
-    transition: 200ms ease;
-    cursor: pointer;
+  }
+}
 
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
+.tag {
+  line-height: 1.4;
+  transition: 200ms ease;
+  cursor: pointer;
 
-    &.active,
-    &:hover {
-      color: var(--color-accent);
-    }
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &.active,
+  &:hover {
+    color: var(--color-accent);
   }
 }

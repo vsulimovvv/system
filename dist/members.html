@@ -396,9 +396,7 @@
   <div class="header-profile header-profile--bg-white">
     <div class="container">
       <div class="header-profile__inner">
-        <div class="header-profile__left">
-          Все участники
-        </div>
+        <div class="header-profile__left">Все участники</div>
 
         <form class="header-profile-search">
           <input
@@ -636,15 +634,20 @@
           <div class="members-filters__group">
             <p class="members-filters__name">Связи</p>
             <div class="members-filters__tags">
-              <button class="members-filters__tag" type="button">
+              <label class="tag" for="tag-1">
                 #строительство
-              </button>
-              <button class="members-filters__tag" type="button">
+                <input class="visually-hidden" type="checkbox" id="tag-1" />
+              </label>
+
+              <label class="tag" for="tag-2">
                 #недвижимость
-              </button>
-              <button class="members-filters__tag" type="button">
+                <input class="visually-hidden" type="checkbox" id="tag-2" />
+              </label>
+
+              <label class="tag" for="tag-3">
                 #строительные_материалы
-              </button>
+                <input class="visually-hidden" type="checkbox" id="tag-3" />
+              </label>
             </div>
           </div>
           <div class="members-filters__group">

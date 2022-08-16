@@ -27,13 +27,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // * ===== Add Tags
   (function addTags() {
-    const tags = document.querySelectorAll('.form-add__tag + input');
+    const tags = document.querySelectorAll('.tag input');
     tags.forEach((tag) => {
-      console.log(tag);
-
-      tag.addEventListener('click', (e) => {
-        tag.previousElementSibling.classList.toggle('active');
-      });
+      if (tag) {
+        tag.addEventListener('click', (e) => {
+          tag.parentElement.classList.toggle('active');
+        });
+      }
     });
   })();
 
