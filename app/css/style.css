@@ -5399,6 +5399,7 @@ input[type=file] {
   font-weight: 500;
   color: var(--color-black);
   margin-bottom: 20px;
+  display: block;
 }
 @media (max-width: 1270px) {
   .profile__name {

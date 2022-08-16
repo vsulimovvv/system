@@ -89,6 +89,7 @@
   &__name {
     @include fz30();
     @include adaptive-value('margin-bottom', 20, 15, 1);
+    display: block;
   }
 
   &__address {
