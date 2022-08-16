@@ -25,11 +25,14 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+  // * ===== Add Tags
   (function addTags() {
-    const tags = document.querySelectorAll('.form-add__tag');
-    tags.forEach((el) => {
-      el.addEventListener('click', (e) => {
-        el.classList.toggle('active');
+    const tags = document.querySelectorAll('.form-add__tag + input');
+    tags.forEach((tag) => {
+      console.log(tag);
+
+      tag.addEventListener('click', (e) => {
+        tag.previousElementSibling.classList.toggle('active');
       });
     });
   })();

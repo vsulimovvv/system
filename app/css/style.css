@@ -6035,6 +6035,7 @@ input[type=file] {
   -webkit-transition: 200ms ease;
   -o-transition: 200ms ease;
   transition: 200ms ease;
+  cursor: pointer;
 }
 .form-add__tag:not(:last-child) {
   margin-right: 10px;

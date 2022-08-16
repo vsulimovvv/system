@@ -101,11 +101,20 @@
         <div class="form-add__group">
           <p class="form-add__name">Связи</p>
           <div class="form-add__tags">
-            <button class="form-add__tag" type="button">#строительство</button>
-            <button class="form-add__tag" type="button">#недвижимость</button>
-            <button class="form-add__tag" type="button">
-              #строительные_материалы
-            </button>
+            <div>
+              <label class="form-add__tag" for="tag-1"> #строительство </label>
+              <input class="visually-hidden" type="checkbox" id="tag-1" />
+            </div>
+            <div>
+              <label class="form-add__tag" for="tag-2"> #недвижимость </label>
+              <input class="visually-hidden" type="checkbox" id="tag-2" />
+            </div>
+            <div>
+              <label class="form-add__tag" for="tag-3">
+                #строительные_материалы
+              </label>
+              <input class="visually-hidden" type="checkbox" id="tag-3" />
+            </div>
           </div>
         </div>
 
@@ -161,7 +170,7 @@
         </div>
 
         <button class="form-add__btn btn" type="submit">
-          Показать результаты
+          Добавить участника
         </button>
       </form>
     </div>
