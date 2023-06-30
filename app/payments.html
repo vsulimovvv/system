@@ -16,13 +16,11 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
 />
 
+<!-- nice-select -->
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
 />
-
-<!-- bootstrap -->
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"> -->
 
 <!-- Choices JS  -->
 <link
@@ -49,56 +47,7 @@
   </head>
 
   <body>
-    <!-- <div class="popup popup--enter">
-  <div class="popup__container">
-    <button class="popup__close" type="button" aria-label="Закрыть"></button>
-    <div class="popup__wrapper">
-      <h2 class="popup__title">Вступить в клуб</h2>
-      <div class="popup__text">
-        <p>Оставьте Ваши данные и мы свяжемся с Вами</p>
-      </div>
-
-      <form class="join__form form-submit">
-        <label class="form-submit__group">
-          <input class="form-submit__input" type="text" placeholder="Имя" />
-          <span class="form-submit__line"></span>
-        </label>
-        <label class="form-submit__group">
-          <input
-            class="form-submit__input"
-            type="tel"
-            placeholder="Контактный телефон"
-          />
-          <span class="form-submit__line"></span>
-        </label>
-        <label class="form-submit__group">
-          <input class="form-submit__input" type="text" placeholder="Ниша" />
-          <span class="form-submit__line"></span>
-        </label>
-        <label class="form-submit__group">
-          <input
-            class="form-submit__input"
-            type="text"
-            placeholder="Уровень дохода"
-          />
-          <span class="form-submit__line"></span>
-        </label>
-
-        <div class="form-submit__bottom">
-          <button class="form-submit__btn btn" type="submit">
-            Отправить заявку
-          </button>
-          <div class="form-submit__agree">
-            Отправляя заявку, Вы соглашаетесь на
-            <a href="#">обработку персональных данных</a>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div> -->
-
-<div class="popup popup--enter">
+    <div class="popup popup--enter">
   <div class="popup__container">
     <button class="popup__close" type="button" aria-label="Закрыть"></button>
     <div class="popup__wrapper">
@@ -182,7 +131,7 @@
 </div>
 
 
-  
+    <h1 class="visually-hidden">Главная</h1>
 
     <div class="site-wrapper">
       <header class="header">
@@ -322,164 +271,70 @@
 
 
       <main class="main">
-        <section class="profile">
-  <div class="profile__top">
-    <div class="container">
-      <div class="profile__top-inner">
-        <div class="profile__left">Профиль</div>
-        <div class="profile-nav">
-          <ul class="profile-nav__list">
-            <li class="profile-nav__item">
-              <a class="profile-nav__link active" href="#">Профиль</a>
-            </li>
-            <li class="profile-nav__item">
-              <a class="profile-nav__link" href="#">Все участники</a>
-            </li>
-            <li class="profile-nav__item">
-              <a
-                class="profile-nav__link profile-nav__link--telegram"
-                href="#"
-                target="_blank"
-              >
-                Написать директору
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+        <section class="payments">
+  <div class="container">
+    <div class="payments__top">
+      <h2 class="payments__title">
+        Онлайн - оплата доступа <br />
+        в Бизнес - клуб «Система»
+      </h2>
+      <p class="payments__text">
+        Оплатите доступ в наш бизнес - клуб банковской картой стандартным
+        методом, а так же через систему быстрых платежей, по QR-коду
+      </p>
     </div>
   </div>
-  <div class="profile__content">
-    <div class="container">
-      <div class="profile__wrapper">
-        <div class="profile__left">
-          <div class="profile__left-inner">
-            <img
-              class="profile__img"
-              src="images/content/mentors/1.jpg"
-              alt="Азат"
-            />
+  <div
+    class="payments__wrapper"
+    style="background-image: url('../images/content/payment-bg.jpg')"
+  >
+    <div class="payments__inner">
+      <div class="payments__left">
+        <h3 class="payments__heading">Оплатите по QR - коду</h3>
+        <p class="payments__descr">
+          Наведите камеру телефона на QR-код и произведите оплату
+        </p>
 
-            <h3 class="profile__name">Азат Шигаев</h3>
-            <p class="profile__address">Москва, Россия</p>
-
-            <div class="profile-contact">
-              <ul class="profile-contact__list">
-                <li class="profile-contact__item">
-                  <p>Телефон</p>
-                  <a class="profile-contact__link" href="tel:+71234567890">
-                    8 (123) 456 78 90
-                  </a>
-                </li>
-                <li class="profile-contact__item">
-                  <p>Телеграм</p>
-                  <a class="profile-contact__link" href="#" target="_blank">
-                    azat_sch
-                  </a>
-                </li>
-                <li class="profile-contact__item">
-                  <p>Инстаграм</p>
-                  <a class="profile-contact__link" href="#" target="_blank">
-                    azat_sch_insta
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="profile__right">
-          <div class="profile-info">
-            <ul class="profile-info__list">
-              <li class="profile-info__item">
-                <img
-                  class="profile-info__item-img"
-                  src="images/content/profile/1.png"
-                  alt="Ниша"
+        <img class="payments__img" src="images/content/qr.png" alt="code" />
+      </div>
+      <div class="payments-sum">
+        <div class="payments-sum__inner">
+          <span class="payments-sum__heading">Выберите сумму для оплаты</span>
+          <ul class="payments-sum__list">
+            <li class="payments-sum__item">
+              <label class="payments-sum__checkbox checkbox">
+                <input
+                  class="checkbox__input"
+                  type="radio"
+                  name="sum"
+                  checked
                 />
-
-                <div class="profile-info__item-left">
-                  <p class="profile-info__item-name">Ниша</p>
-                  <p class="profile-info__item-text">
-                    Недвижимость | Строительство
-                  </p>
-                </div>
-              </li>
-              <li class="profile-info__item">
-                <img
-                  class="profile-info__item-img"
-                  src="images/content/profile/2.png"
-                  alt="Ниша"
-                />
-
-                <div class="profile-info__item-left">
-                  <p class="profile-info__item-name">Доход чистыми</p>
-                  <p class="profile-info__item-text">более 1 миллиона рублей</p>
-                </div>
-              </li>
-              <li class="profile-info__item">
-                <img
-                  class="profile-info__item-img"
-                  src="images/content/profile/3.png"
-                  alt="Доход чистыми "
-                />
-
-                <div class="profile-info__item-left">
-                  <p class="profile-info__item-name">Хобби</p>
-                  <p class="profile-info__item-text">
-                    Развитие предпринимателей, публичные выступления, здоровый
-                    образ жизни, системность во всех сферах, баня, бег.
-                  </p>
-                </div>
-              </li>
-
-              <li class="profile-info__item">
-                <img
-                  class="profile-info__item-img"
-                  src="images/content/profile/4.png"
-                  alt="Хобби"
-                />
-
-                <div class="profile-info__item-left">
-                  <p class="profile-info__item-name">Дарю клубу один час</p>
-                  <p class="profile-info__item-text">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry
-                  </p>
-                </div>
-              </li>
-              <li class="profile-info__item">
-                <img
-                  class="profile-info__item-img"
-                  src="images/content/profile/5.png"
-                  alt="Может дать клубу со скидкой"
-                />
-
-                <div class="profile-info__item-left">
-                  <p class="profile-info__item-name">
-                    Может дать клубу со скидкой
-                  </p>
-                  <p class="profile-info__item-text">
-                    Вывоз и переработка мусора, Шнековое направленное бурение.
-                  </p>
-                </div>
-              </li>
-              <li class="profile-info__item">
-                <img
-                  class="profile-info__item-img"
-                  src="images/content/profile/6.png"
-                  alt="Какие есть связи "
-                />
-
-                <div class="profile-info__item-left">
-                  <p class="profile-info__item-name">Какие есть связи</p>
-                  <p class="profile-info__item-text">
-                    #строительство #недвижимость #прокладка_коммуникаций
-                    #бурение
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
+                <span class="checkbox__box"></span>
+                <span class="checkbox__text"> 500 руб </span>
+              </label>
+            </li>
+            <li class="payments-sum__item">
+              <label class="payments-sum__checkbox checkbox">
+                <input class="checkbox__input" type="radio" name="sum" />
+                <span class="checkbox__box"></span>
+                <span class="checkbox__text"> 20 000 руб </span>
+              </label>
+            </li>
+            <li class="payments-sum__item">
+              <label class="payments-sum__checkbox checkbox">
+                <input class="checkbox__input" type="radio" name="sum" />
+                <span class="checkbox__box"></span>
+                <span class="checkbox__text">50 000 руб </span>
+              </label>
+            </li>
+            <li class="payments-sum__item">
+              <label class="payments-sum__checkbox checkbox">
+                <input class="checkbox__input" type="radio" name="sum" />
+                <span class="checkbox__box"></span>
+                <span class="checkbox__text">150 000 руб</span>
+              </label>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -550,6 +405,7 @@
 <!-- Choices JS -->
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
+<!-- nice-select -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
 
 <!-- Input Mask -->
@@ -558,6 +414,7 @@
   type="text/javascript"
 ></script>
 
+<!-- fancybox -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 <!-- Vanilla Calendar -->
