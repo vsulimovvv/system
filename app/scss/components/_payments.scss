@@ -28,7 +28,7 @@
     max-width: 575px;
     margin: 0 auto;
     text-align: center;
-    @include adaptive-value('margin-bottom', 130, 60, 1);
+    @include adaptive-value('margin-bottom', 130, 40, 1);
   }
 
   &__wrapper {

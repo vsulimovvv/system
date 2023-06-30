@@ -6110,7 +6110,7 @@ input[type=file] {
 @media (max-width: 1270px) {
   .payments__top {
     margin-bottom: calc(
-        60px + 70 *
+        40px + 90 *
           ((100vw - 375px) / 895)
       );
   }
