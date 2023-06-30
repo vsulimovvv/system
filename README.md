@@ -11,5 +11,5 @@
 Все участники: https://vsulimovvv.github.io/system/app/members.html  
 Добавление участников: https://vsulimovvv.github.io/system/app/add.html  
 
-Оплата: https://vsulimovvv.github.io/test-without/app/payment.html  
+Оплата: https://vsulimovvv.github.io/test-without/app/payments.html  
 
